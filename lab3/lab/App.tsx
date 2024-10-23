@@ -6,14 +6,14 @@
 import React, {useState} from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {BottomNavigation, Text} from 'react-native-paper';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; // Sử dụng bộ icon
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; 
 
 import ProductList from './components/Products';
 import Add from './components/Add';
 import Product_Search from './components/Product_Search';
 import Product_Detail from './components/Product_Detail';
 function App(): React.JSX.Element {
-  const [index, setIndex] = useState(0); // Quản lý tab hiện tại
+  const [index, setIndex] = useState(0); 
   const [routes] = useState([
     {key: 'products', title: 'Products', icon: 'folder'},
     {key: 'add', title: 'Add', icon: 'folder'},
@@ -38,7 +38,7 @@ function App(): React.JSX.Element {
         navigationState={{index, routes}}
         onIndexChange={setIndex}
         renderScene={renderScene}
-        renderIcon={renderIcon} // Render icon với kích thước tùy chỉnh
+        renderIcon={renderIcon} 
       />
     </SafeAreaProvider>
   );
