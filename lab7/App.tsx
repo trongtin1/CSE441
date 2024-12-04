@@ -24,6 +24,7 @@ import {MenuProvider} from 'react-native-popup-menu';
 import Login from './components/Login';
 import DetailCustomer from './components/Customer/DetailCustomer';
 import UpdateCustomer from './components/Customer/UpdateCustomer';
+import AddTransaction from './components/Transaction/AddTransaction';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -33,6 +34,7 @@ const TransactionStack = () => {
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="TransactionList" component={Transaction} />
       <Stack.Screen name="DetailTransaction" component={DetailTransaction} />
+      <Stack.Screen name="AddTransaction" component={AddTransaction} />
     </Stack.Navigator>
   );
 };

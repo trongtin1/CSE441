@@ -114,7 +114,9 @@ const Transaction = ({navigation}) => {
           />
         )}
       </View>
-      <TouchableOpacity style={styles.addButton}>
+      <TouchableOpacity
+        style={styles.addButton}
+        onPress={() => navigation.navigate('AddTransaction')}>
         <Icon name="add" size={20} color="white" />
       </TouchableOpacity>
     </View>
